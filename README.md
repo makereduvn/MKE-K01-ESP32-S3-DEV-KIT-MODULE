@@ -95,7 +95,7 @@ Chương trình này sẽ quét các mạng Wifi có sẵn trong khu vực và h
 - Luôn đảm bảo mạch:
   - Không bị chập mạch
   - Không đấu sai cực nguồn
-- Nên ngắt nguồn ngoài trước khi thay đổi đấu nối phần cứng.
+- Nên ngắt nguồn trước khi thay đổi đấu nối phần cứng.
 
 ## Hình ảnh sản phẩm
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_6.png)
