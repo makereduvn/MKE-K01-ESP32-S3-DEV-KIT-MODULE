@@ -1,9 +1,9 @@
 # Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit
 
 ## Giới thiệu
-Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển ứng dụng dựa trên module ESP32-S3-WROOM-1 chính hãng Espressif, được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển không dây với hiệu năng xử lý mạnh mẽ và kết nối Wi-Fi/BLE linh hoạt.
+Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển ứng dụng dựa trên module ESP32-S3-WROOM-1 chính hãng Espressif, được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển với hiệu năng xử lý mạnh mẽ và kết nối linh hoạt.
 
-Ứng dụng thực tế:
+**Ứng dụng thực tế:**
 - Hệ thống IoT/Smart Home: điều khiển đèn, cảm biến từ xa
 - AIoT/Computer Vision nhẹ: nhận dạng cơ bản trên thiết bị
 - Thu thập dữ liệu không dây: sensor network, môi trường
@@ -16,7 +16,8 @@ Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển 
   - N16R8 – 16 MB Flash + 8 MB PSRAM (tối ưu cho ứng dụng AI/ML, buffer lớn)
   - MCN4 – 4 MB Flash không PSRAM (phù hợp dự án cơ bản)
   - MCN16 – 16 MB Flash không PSRAM (nhiều chương trình hơn, chi phí thấp)
-- LED RGB tích hợp điều khiển bằng GPIO
+- LED RGB tích hợp điều khiển bằng GPIO48
+- Nút nhấn KEY tích hợp điều khiển bằng GPIO45 (phiên bản V2)
 - Cổng USB OTG + USB-to-UART onboard giúp nạp chương trình dễ dàng và giao tiếp với máy tính
 - Tích hợp đầy đủ chân GPIO breakout, tương thích thiết kế breadboard
 - Hỗ trợ môi trường phát triển Arduino IDE, ESP-IDF, MicroPython
@@ -39,6 +40,7 @@ Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển 
 - Nút chức năng
   - RESET – khởi động lại MCU
   - BOOT (Download) – đưa board vào chế độ nạp firmware
+  - KEY (tuỳ biến) - điều khiển bằng GPIO45 (phiên bản V2)
 - LED chỉ báo
   - LED RGB addressable nằm trên board, được điều khiển qua GPIO48 giúp hiển thị trạng thái, debugging hoặc ánh sáng tùy chỉnh
   - LED Power 3.3 V bật khi board được cấp nguồn qua USB
