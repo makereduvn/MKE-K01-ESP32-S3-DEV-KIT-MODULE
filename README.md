@@ -73,12 +73,26 @@ Thực hiện các thiết lập sau trong Arduino IDE:
 _Dưới đây là ví dụ cấu hình mạch ESP32-S3 16 MB Flash + 8 MB PSRAM (N16R8):_
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_4.png)
 
-### Bước 5: Nạp chương trình thử nghiệm (Blink)
-Sau khi cấu hình xong, bạn có thể nạp chương trình mẫu tại File → Examples → Wifi → WiFiScan để kiểm tra mạch, mạch có thiết kế chức năng nạp tự động nên không cần nhấn các nút Boot hoặc Reset.
-![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_5.png)
+### Bước 5: Nạp chương trình thử nghiệm (Hello World!)
+Sau khi cấu hình xong, bạn có thể nạp chương trình mẫu `Hello World` để kiểm tra mạch, mạch có thiết kế chức năng nạp tự động nên không cần nhấn các nút Boot hoặc Reset.
+```ino
 
-Chương trình này sẽ quét các mạng Wifi có sẵn trong khu vực và hiển thị lên Serial Monitor của Arduino.
-![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_2.png)
+void setup()
+{
+  // initialize serial communication at 115200 bits per second:
+  Serial.begin(115200);
+}
+
+void loop()
+{
+  // print out
+  Serial.println("Hello World!");
+  // delay 1s
+  delay(1000);
+}
+```
+
+Chương trình này sẽ hiển thị chữ "Hello World!" lên Serial Monitor của Arduino.
 
 ## Lưu ý sử dụng an toàn
 - Không đặt mạch trên bề mặt kim loại dẫn điện
