@@ -1,7 +1,7 @@
 # Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit
 
 ## Giới thiệu
-Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển ứng dụng dựa trên module ESP32-S3-WROOM-1 chính hãng Espressif, được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển với hiệu năng xử lý mạnh mẽ và kết nối linh hoạt.
+Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển ứng dụng dựa trên module [ESP32-S3-WROOM-1 chính hãng Espressif](/extras/esp32-s3-wroom-1-datasheet.pdf), được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển với hiệu năng xử lý mạnh mẽ và kết nối linh hoạt.
 
 **Ứng dụng thực tế:**
 - Hệ thống IoT/Smart Home: điều khiển đèn, cảm biến từ xa
@@ -12,10 +12,10 @@ Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển 
 - Gateway Protocols/Edge Devices
 
 ## Ưu điểm nổi bật
-- Sử dụng module trung tâm ESP32-S3-WROOM-1 chính hãng Espressif và các linh kiện chính hãng chất lượng cao với 3 tùy chọn cấu hình bộ nhớ:
-  - N16R8 – 16 MB Flash + 8 MB PSRAM (tối ưu cho ứng dụng AI/ML, buffer lớn)
+- Sử dụng module trung tâm [ESP32-S3-WROOM-1 chính hãng Espressif](/extras/esp32-s3-wroom-1-datasheet.pdf) và các linh kiện chính hãng chất lượng cao với 3 tùy chọn cấu hình bộ nhớ:
   - MCN4 – 4 MB Flash không PSRAM (phù hợp dự án cơ bản)
   - MCN16 – 16 MB Flash không PSRAM (nhiều chương trình hơn, chi phí thấp)
+  - N16R8 – 16 MB Flash + 8 MB PSRAM (tối ưu cho ứng dụng AI/ML, buffer lớn)
 - LED RGB tích hợp điều khiển bằng GPIO48
 - Nút nhấn KEY tích hợp điều khiển bằng GPIO45 (phiên bản V2)
 - Cổng USB OTG + USB-to-UART onboard giúp nạp chương trình dễ dàng và giao tiếp với máy tính
@@ -24,11 +24,11 @@ Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là mạch phát triển 
 
 ## Thông số kỹ thuật
 - Nguồn hoạt động: 5VDC từ cổng USB
-- Module trung tâm: ESP32-S3-WROOM-1 (Wi-Fi + BLE5) chính hãng Espressif
+- Module trung tâm: [ESP32-S3-WROOM-1 chính hãng Espressif](/extras/esp32-s3-wroom-1-datasheet.pdf)
 - Bộ nhớ Flash & PSRAM tùy chọn:
-  - 16 MB Flash + 8 MB PSRAM (N16R8)
   - 4 MB Flash không PSRAM (MCN4)
   - 16 MB Flash không PSRAM (MCN16)
+  - 16 MB Flash + 8 MB PSRAM (N16R8)
 - IC giao tiếp USB-UART: High-speed Serial UART CH343P chính hãng có tốc độ truyền tối đa lên đến 6Mbp tương thích chuẩn USB 2.0, tự nhận Driver trên hầu hết các hệ điều hành.
 - Cổng USB
   - Cổng USB-to-UART (MicroUSB/USB-C tùy phiên bản) dùng để cấp nguồn, nạp chương trình và giao tiếp debug
@@ -109,6 +109,6 @@ Chương trình này sẽ hiển thị chữ "Hello World!" lên Serial Monitor 
 ## Hình ảnh sản phẩm
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_6.png)
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_7.png)
-
+![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_8.png)
 ## Miễn trừ trách nhiệm
 Sản phẩm này là mô đun phát triển được thiết kế phục vụ cho mục đích nghiên cứu, thử nghiệm và học tập, không phải là một thiết bị hoàn chỉnh. Trong trường hợp người dùng kết hợp mô đun này với các linh kiện, thiết bị hoặc phần mềm khác để tạo thành một hệ thống hoặc sản phẩm hoàn chỉnh, mọi chức năng và tính phù hợp của sản phẩm sau cùng đều thuộc trách nhiệm của người dùng.
