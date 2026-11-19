@@ -1,7 +1,7 @@
-# Mạch phát triển MKE-K01 ESP32-S3 Dev Kit
+# Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit
 
 ## Giới thiệu
-Mạch phát triển MKE-K01 ESP32-S3 Dev Kit là board phát triển ứng dụng dựa trên module ESP32-S3-WROOM-1 chính hãng Espressif, được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển không dây với hiệu năng xử lý mạnh mẽ và kết nối Wi-Fi/BLE linh hoạt.
+Mạch phát triển mô đun MKE-K01 ESP32-S3 Dev Kit là board phát triển ứng dụng dựa trên module ESP32-S3-WROOM-1 chính hãng Espressif, được thiết kế tương thích với nguyên mẫu ESP32-S3 DevKitC-1, giúp người dùng tận dụng tối đa tài liệu, sơ đồ chân và phần mềm mẫu có sẵn. Sản phẩm tối ưu cho phát triển các dự án IoT, AIoT, nhúng và điều khiển không dây với hiệu năng xử lý mạnh mẽ và kết nối Wi-Fi/BLE linh hoạt.
 
 Ứng dụng thực tế:
 - Hệ thống IoT/Smart Home: điều khiển đèn, cảm biến từ xa
@@ -12,13 +12,10 @@ Mạch phát triển MKE-K01 ESP32-S3 Dev Kit là board phát triển ứng dụ
 - Gateway Protocols/Edge Devices
 
 ## Ưu điểm nổi bật
-- Sử dụng module trung tâm ESP32-S3-WROOM-1 chính hãng Espressif và các linh kiện chính hãng chất lượng cao.
-- Ba tùy chọn cấu hình bộ nhớ:
+- Sử dụng module trung tâm ESP32-S3-WROOM-1 chính hãng Espressif và các linh kiện chính hãng chất lượng cao với 3 tùy chọn cấu hình bộ nhớ:
   - N16R8 – 16 MB Flash + 8 MB PSRAM (tối ưu cho ứng dụng AI/ML, buffer lớn)
   - MCN4 – 4 MB Flash không PSRAM (phù hợp dự án cơ bản)
   - MCN16 – 16 MB Flash không PSRAM (nhiều chương trình hơn, chi phí thấp)
-- Hỗ trợ kết nối Wi-Fi 2.4 GHz và Bluetooth Low Energy (BLE5)
-- CPU Dual-core Xtensa® LX7 cho hiệu năng cao, xử lý đa nhiệm mượt
 - LED RGB tích hợp điều khiển bằng GPIO
 - Cổng USB OTG + USB-to-UART onboard giúp nạp chương trình dễ dàng và giao tiếp với máy tính
 - Tích hợp đầy đủ chân GPIO breakout, tương thích thiết kế breadboard
@@ -27,14 +24,10 @@ Mạch phát triển MKE-K01 ESP32-S3 Dev Kit là board phát triển ứng dụ
 ## Thông số kỹ thuật
 - Nguồn hoạt động: 5VDC từ cổng USB
 - Module trung tâm: ESP32-S3-WROOM-1 (Wi-Fi + BLE5) chính hãng Espressif
-- CPU: Xtensa® Dual-core LX7, up to 240 MHz
 - Bộ nhớ Flash & PSRAM tùy chọn:
   - 16 MB Flash + 8 MB PSRAM (N16R8)
   - 4 MB Flash không PSRAM (MCN4)
   - 16 MB Flash không PSRAM (MCN16)
-- Kết nối không dây:
-  - Wi-Fi 802.11 b/g/n (2.4 GHz)
-  - Bluetooth Low Energy BLE5
 - IC giao tiếp USB-UART: High-speed Serial UART CH343P chính hãng có tốc độ truyền tối đa lên đến 6Mbp tương thích chuẩn USB 2.0, tự nhận Driver trên hầu hết các hệ điều hành.
 - Cổng USB
   - Cổng USB-to-UART (MicroUSB/USB-C tùy phiên bản) dùng để cấp nguồn, nạp chương trình và giao tiếp debug
@@ -64,7 +57,7 @@ Mạch phát triển MKE-K01 ESP32-S3 Dev Kit là board phát triển ứng dụ
 - Sau khi cài đặt, chọn Tools → Board → Boards Manager, tìm từ khoá "esp32" để cài đặt cấu hình các mạch "esp32 by Espressif Systems".
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_3.png)
 ### Bước 2: Kết nối mạch với máy tính
-- Kết nối MKE-K01 ESP32-S3 Dev Kit với máy tính bằng cáp USB vào cổng USB-UART.
+- Kết nối mô đun MKE-K01 ESP32-S3 Dev Kit với máy tính bằng cáp USB vào cổng USB-UART.
 - Khi kết nối thành công, LED nguồn (ON) trên mạch sẽ sáng.
 ### Bước 3: Cài đặt driver CH340
 - MKE-K01 ESP32-S3 Dev Kit sử dụng IC CH343P để giao tiếp USB–UART.
@@ -78,7 +71,7 @@ Thực hiện các thiết lập sau trong Arduino IDE:
 _Dưới đây là ví dụ cấu hình mạch ESP32-S3 16 MB Flash + 8 MB PSRAM (N16R8):_
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_4.png)
 
-### Bước 5: Nạp chương trình thử nghiệm (Wifi Scan)
+### Bước 5: Nạp chương trình thử nghiệm (Blink)
 Sau khi cấu hình xong, bạn có thể nạp chương trình mẫu tại File → Examples → Wifi → WiFiScan để kiểm tra mạch, mạch có thiết kế chức năng nạp tự động nên không cần nhấn các nút Boot hoặc Reset.
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_5.png)
 
@@ -102,4 +95,4 @@ Chương trình này sẽ quét các mạng Wifi có sẵn trong khu vực và h
 ![MKE-K01 ESP32-S3 DK](/extras/MKE-K01_7.png)
 
 ## Miễn trừ trách nhiệm
-Sản phẩm này là bo mạch phát triển được thiết kế phục vụ cho mục đích nghiên cứu, thử nghiệm và học tập, không phải là một thiết bị hoàn chỉnh. Trong trường hợp người dùng kết hợp mạch này với các linh kiện, thiết bị hoặc phần mềm khác để tạo thành một hệ thống hoặc sản phẩm hoàn chỉnh, mọi chức năng và tính phù hợp của sản phẩm sau cùng đều thuộc trách nhiệm của người dùng.
+Sản phẩm này là mô đun phát triển được thiết kế phục vụ cho mục đích nghiên cứu, thử nghiệm và học tập, không phải là một thiết bị hoàn chỉnh. Trong trường hợp người dùng kết hợp mô đun này với các linh kiện, thiết bị hoặc phần mềm khác để tạo thành một hệ thống hoặc sản phẩm hoàn chỉnh, mọi chức năng và tính phù hợp của sản phẩm sau cùng đều thuộc trách nhiệm của người dùng.
